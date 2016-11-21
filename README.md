@@ -2,6 +2,7 @@
 Glossary and transliteration rules for RU->BE
 
 The following resources are meant to be used for a project on Neural Machine Translation for low-resource languages. 
+The method should be easily applied to other low-resource languages with minimum adjustments, this is why the degree of refinement required for the following tasks is very low. We do not perform any lemmatisation or stemming, since these resources are not available for all languages. 
 
 # ru_be_dict.py
 Glossary of the 200 most frequent Russian words, translated into Belorussian.
