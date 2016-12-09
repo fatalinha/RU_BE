@@ -10,43 +10,15 @@ Summer Semester 2015
 
 """
 
-# Instructions: In the case of impossible character combinations at the 
-# beginning or end of the word, please add the rules under the appropriate 
-# function. 
+# Instructions: The model we are training is a character-based one. 
+# Therefore, it is important that we eliminate impossible Russian characters 
+# into Belorussian. Please add the equivalent BE character in the place of ??? (lines 31-32)
 
 import sys
 from ru_be_dict import ru_be_dict
 
 # initialize with most common translations of most common words
 translit_word = ru_be_dict
-
-## beginning of words
-def word_begin(word):
-    '''
-    Transliterates beginnings of words
-    Input: original word (string)
-    Returns: word with beginning modified if necessary (string)
-    '''
-    if word[:2] == 'sp':
-        return 'esp' + word[2:]
-    elif word[:3] == 'qua':
-        return 'cua' + word[3:]
-    return word
-
-
-## end of words
-def word_end(word):
-    '''
-    Transliterates ends of words
-    Input: original word (string)
-    Returns: word with ending modified if necessary (string)
-    '''
-    new_word = word
-    # note have to do this rule before the ones dealing with sione, ne
-    if word[-6:] == 'ssione':
-        new_word = word[:-6] + 'sión'
-    return new_word
-
 
 ## elsewhere in the word
 def word_middle(word):
@@ -56,7 +28,8 @@ def word_middle(word):
     Returns: word with Russian clusters replaced if necessary (string)
     '''
     new_word = word
-    new_word = new_word.replace('che', 'que')
+    new_word = new_word.replace('и', '???')
+    new_word = new_word.replace('ъ', '???')
     return new_word
 
 
