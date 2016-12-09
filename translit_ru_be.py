@@ -28,8 +28,9 @@ def word_middle(word):
     Returns: word with Russian clusters replaced if necessary (string)
     '''
     new_word = word
-    new_word = new_word.replace('и', '???')
-    new_word = new_word.replace('ъ', '???')
+    new_word = new_word.replace('и', 'i')
+    new_word = new_word.replace('ъ', '\'')
+    new_word = new_word.replace('щ', '')
     return new_word
 
 
