@@ -11,4 +11,4 @@ Glossary of the 200 most frequent Russian words, translated into Belorussian.
 Example transliteration rules (IT->ES) used in the experiments mentioned in the NAACL paper "Using Related Languages to Enhance Statistical Language Models" (Currey and Karakanta, 2016).
 
 # translit_ru_be.py
-Transliteration rules for Russian characters and character combinations that are not present in Belorussian. They should not necessarily be so detailed as the transliteration rules in the example file.
+Transliteration rules for Russian characters and character combinations that are not present in Belorussian. They are less   detailed than the transliteration rules in the IT->ES file above. This was used for the research in "Neural Machine Translation for Low-Resource Languages without Parallel Data" (Karakanta et al., 2018).
